@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  background-color: cyan;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .card {
+  height: 450px;
+  width: 350px;
+  background-color: rgb(255, 255, 255);
+  border: 3px solid rgb(53, 52, 52);
+  border-radius: 20px;
+  position: relative;
+}
+main .card .full-screen {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: none;
+  border-radius: 17px;
+}
+main .card .storyian {
+  width: 100%;
+  padding: 20px;
+  height: 120px;
+  border-bottom: 1px solid #9e9d9d;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+main .card .storyian .story {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: antiquewhite;
+  display: inline-block;
+  margin-right: 10px;
+  outline: 3px solid rgba(247, 171, 56, 0.631372549);
+}
+main .card .storyian .story img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+main .card .storyian::-webkit-scrollbar {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
