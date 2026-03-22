@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    background-image: url(./clay-banks-BnDI_MVomAI-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+:root{
+    --black: #000000d3;
+    --white: #ffffff00;
+
+    --x: 100px;
+    --y: 100px;
+}
+.box{
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(200px at var(--x) var(--y) , var(--white), var(--black));
+}
