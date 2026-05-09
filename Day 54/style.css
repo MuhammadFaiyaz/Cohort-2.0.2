@@ -38,18 +38,26 @@ body {
     height: 370px;
     width: 280px;
     border-radius: 10px;
-    box-shadow: 0 0 50px rgb(255, 0, 128);
+    box-shadow: 0 0 0px rgb(255, 0, 128);
     background: linear-gradient(#000000) padding-box, conic-gradient(from var(--rotate), black, rgb(255, 0, 128), black) border-box;
     padding-bottom: 10px;
     padding-inline: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 5px solid transparent;
+    border: 0px solid transparent;
     animation: borderAnimate 3s linear infinite;
-
+    animation-play-state: paused;
+    transition: all 0.5s linear;
+    text-shadow: 0 0 0px rgb(255, 0, 128);
 }
-
+.box:hover{
+    text-shadow: 0 0 40px rgb(255, 0, 128);
+    animation-play-state: running;
+    border: 5px solid transparent;
+    box-shadow: 0 0 50px rgb(255, 0, 179);
+    color: rgb(255, 0, 128);
+}
 img {
     width: 100%;
     object-fit: cover;
