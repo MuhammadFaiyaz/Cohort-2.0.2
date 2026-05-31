@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+    body {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      width: 300px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    input {
+      width: 80%;
+      padding: 10px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      outline: none;
+      margin-bottom: 10px;
+    }
+
+    input:focus {
+      border-color: #4facfe;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background: #4facfe;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #00c6ff;
+    }
+
+    #result {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    #error {
+      margin-top: 10px;
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+    <h2>Weather App 🌤️</h2>
+
+    <input type="text" id="cityInput" placeholder="Enter city name">
+    <br>
+    <button id="searchBtn">Search</button>
+
+    <div id="result"></div>
+    <div id="error"></div>
+  </div>
+    <script src="script.js"></script>
+</body>
+</html>
