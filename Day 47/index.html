@@ -7,15 +7,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <main>
         <div class="card">
-            <img src="./profile-pic.jpg" alt="">
-            <h2>Muhammad Faiyaz</h2>
-            <p class="prof">Content Writer</p>
-            <p class="dscrp">Writes blogs and technical documentation.</p>
-            <p class="age">Age: 22</p>
-            <p class="salary">Salary: 30000</p>
+
+            <!-- Gold accent stripe (CSS ::before handles this, nothing needed here) -->
+
+            <div class="card-body">
+                <div class="avatar-wrap">
+                    <img src="./profile-pic.jpg" alt="Muhammad Faiyaz">
+                </div>
+                <h2>Muhammad Faiyaz</h2>
+                <p class="prof">Content Writer</p>
+                <div class="divider"></div>
+                <p class="dscrp">Writes blogs and technical documentation.</p>
+                <div class="stats-row">
+                    <div class="stat">
+                        <span class="stat-label">Age</span>
+                        <span class="age">22</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Salary</span>
+                        <span class="salary">30000</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
     <script src="script.js"></script>

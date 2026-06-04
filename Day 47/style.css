@@ -1,79 +1,157 @@
-@font-face {
-  font-family: "Poppins";
-  src: url("./Poppins-Regular.ttf");
-}
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
-html,
-body {
+html, body {
   min-height: 100%;
   width: 100%;
-  background: rgba(132, 151, 235, 0.1176470588);
+  background: #0e0d0b;
 }
 
 main {
   min-height: 100vh;
-  padding: 20px;
+  padding: 2rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 20px;
   flex-wrap: wrap;
-  flex-shrink: 0;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 main .card {
-  width: 300px;
-  padding: 25px;
+  width: 280px;
+  background: #1a1814;
+  border: 1px solid #3a3320;
   border-radius: 20px;
-  background: #f5f1cb;
-  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.7), 0 4px 16px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+main .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 36px 80px rgba(0, 0, 0, 0.8), 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+main .card::before {
+  content: "";
+  display: block;
+  height: 3px;
+  background: linear-gradient(90deg, #8a6010, #f5d97e, #c9952a);
+}
+main .card .card-body {
+  padding: 28px 24px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
-  box-shadow: 5px 5px rgb(226, 223, 71);
+  gap: 6px;
+}
+main .card .avatar-wrap {
+  position: relative;
+  margin-bottom: 8px;
+}
+main .card .avatar-wrap::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  border: 1.5px solid transparent;
+  background: linear-gradient(135deg, #f5d97e, #8a6010, #f5d97e) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
 }
 main .card img {
-  width: 110px;
-  height: 110px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
-  border: 3px solid #ddd;
+  display: block;
+  border: 2px solid #3a3320;
 }
 main .card h2 {
+  font-family: "Cormorant Garamond", serif;
   font-size: 22px;
   font-weight: 700;
-  color: black;
+  color: #f0ead8;
+  letter-spacing: 0.02em;
+  text-align: center;
 }
 main .card .prof {
-  font-size: 20px;
-  font-weight: 600;
-  color: rgb(255, 94, 0);
+  font-size: 12px;
+  font-weight: 500;
+  color: #c9952a;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+}
+main .card .divider {
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #3a3320, transparent);
+  margin: 6px 0;
 }
 main .card .dscrp {
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 300;
+  color: #a89d7e;
+  text-align: center;
+  line-height: 1.6;
+}
+main .card .badge {
+  font-size: 10px;
   font-weight: 500;
-  color: black;
+  color: #c9952a;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 99px;
+  background: rgba(201, 149, 42, 0.12);
+  border: 1px solid rgba(201, 149, 42, 0.25);
+  margin-top: 2px;
+}
+main .card .stats-row {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+  border: 1px solid #3a3320;
+  border-radius: 12px;
+  overflow: hidden;
+}
+main .card .stats-row .stat {
+  flex: 1;
+  padding: 12px 8px;
+  text-align: center;
+}
+main .card .stats-row .stat:not(:last-child) {
+  border-right: 1px solid #3a3320;
+}
+main .card .stats-row .stat-label {
+  font-size: 10px;
+  font-weight: 500;
+  color: #6b6248;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  display: block;
 }
 main .card .age {
-  font-size: 24px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
   font-weight: 700;
-  background: linear-gradient(90deg, rgb(255, 208, 0), #d6d328, #ff9408);
+  background: linear-gradient(135deg, #8a6010, #f5d97e, #c9952a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 main .card .salary {
-  font-size: 24px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
   font-weight: 700;
-  background: linear-gradient(90deg, #03eb50, #41b12a, #2c5f22);
+  background: linear-gradient(90deg, #6debb4, rgb(29.156626506, 212.843373494, 132.6626506024));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
 }/*# sourceMappingURL=style.css.map */
